@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Em Desenvolvimento por Venceslau</title> 
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+    .header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #e0e7ff;
+      padding: 10px 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #1e3a8a;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+    }
+    .audio-card, .about-card, .contact-card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .audio-card h2, .about-card h2, .contact-card h2 {
+      font-size: 18px;
+      margin: 0 0 10px 0;
+    }
+    audio {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      color: #888;
+      background-color: #f9f9f9;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    function showPage(pageId) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.add('hidden'));
+      document.getElementById(pageId).classList.remove('hidden');
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <h1>Calmind</h1>
+    <p>Meditations by Joe Dispenza</p>
+  </div>
+
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('about')">About</a>
+    <a href="#" onclick="showPage('contact')">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div id="home" class="page">
+      <div class="audio-card">
+        <h2>Meditation 1</h2>
+        <audio controls>
+          <source src="meditation1.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-card">
+        <h2>Meditation 2</h2>
+        <audio controls>
+          <source src="meditation2.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-card">
+        <h2>Meditation 3</h2>
+        <audio controls>
+          <source src="meditation3.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-card">
+        <h2>Meditation 4</h2>
+        <audio controls>
+          <source src="meditation4.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-card">
+        <h2>Meditation 5</h2>
+        <audio controls>
+          <source src="meditation5.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-card">
+        <h2>Meditation 6</h2>
+        <audio controls>
+          <source src="meditation6.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+
+    <div id="about" class="page hidden">
+      <div class="about-card">
+        <h2>About Calmind</h2>
+        <p>Calmind is a meditation app featuring guided meditations by Dr. Joe Dispenza, designed to help you access deeper states of awareness and transformation. Inspired by the book "Becoming Supernatural".</p>
+      </div>
+    </div>
+
+    <div id="contact" class="page hidden">
+      <div class="contact-card">
+        <h2>Contact Us</h2>
+        <p>For licensing, support or feedback, please email: <a href="mailto:support@calmind.com">support@calmind.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Calmind. All rights reserved. Content from Joe Dispenza's works used under license.
+  </div>
+</body>
+</html>
